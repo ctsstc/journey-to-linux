@@ -1,6 +1,22 @@
 
 # Developer Installations
 
+## Configurations
+
+### Git
+
+#### Set Global Email
+
+```bash
+git config --global user.email "email@example.com"
+```
+
+#### Verify Global Email
+
+```bash
+git config --global user.email
+```
+
 ## Installs
 
 ### Brew
