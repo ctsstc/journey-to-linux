@@ -36,6 +36,8 @@ This clears the console and the buffer so you cannot still scroll back up.
 alias cls="echo -ne '\033c'"
 ```
 
+> <https://superuser.com/questions/299903/clear-terminal-using-keyboard-shortcut>
+
 ### Fuzzy Search History
 
 First you'll need to install fzf:
