@@ -17,3 +17,38 @@ Put the following lines in your `~/.inputrc`:
 ```
 
 > https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow
+
+## Bash RC Mods
+
+To reaload for the current terminal: `source ~/.bashrc`
+
+### Quick Projects Folder Access
+
+```bash
+alias projects='cd ~/Projects'
+```
+
+### Clear Console + Buffer
+
+This clears the console and the buffer so you cannot still scroll back up.
+
+```bash
+alias cls="echo -ne '\033c'"
+```
+
+### Fuzzy Search History
+
+First you'll need to install fzf:
+
+- <https://github.com/junegunn/fzf#installation>
+- Additional Resource
+  - <https://nickjanetakis.com/blog/fuzzy-search-your-bash-history-in-style-with-fzf>
+  - <https://www.youtube.com/watch?v=DBGvWyQNYY0>
+
+```bash
+writecmd (){ perl -e 'ioctl STDOUT, 0x5412, $_ for split //, do{ chomp($_ = <>); $_ }' ; }
+
+fh() {
+  ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -re 's/^\s*[0-9]+\s*//' | writecmd
+}
+```
