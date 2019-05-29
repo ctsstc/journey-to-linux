@@ -5,7 +5,7 @@
 
 ### Up Arrow Auto Complete From History
 
-This allows you to start typing something and then hit the up or down arrow to auto complete from your history off of what you already have typed rather than wiping out what you have and cylcing your history.
+This allows you to start typing something and then hit the up or down arrow to auto complete from your history off of what you already have typed rather than wiping out what you have and cycling your history.
 
 Put the following lines in your `~/.inputrc`:
 
@@ -16,11 +16,11 @@ Put the following lines in your `~/.inputrc`:
 "\e[B":history-search-forward
 ```
 
-> https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow
+> <https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow>
 
 ## UI
 
-### Apperance
+### Appearance
 
 - Dark Mode - Enable
 
@@ -34,7 +34,7 @@ Put the following lines in your `~/.inputrc`:
 
 ## Bash RC Mods
 
-To reaload for the current terminal: `source ~/.bashrc`
+To reload for the current terminal: `source ~/.bashrc`
 
 ### Quick Projects Folder Access
 
