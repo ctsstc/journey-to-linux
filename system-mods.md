@@ -54,3 +54,12 @@ fh() {
   ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -re 's/^\s*[0-9]+\s*//' | writecmd
 }
 ```
+
+### Increase History State Size
+
+<https://askubuntu.com/questions/307541/how-to-change-history-size-for-ever>
+
+```bash
+HISTSIZE=5000
+HISTFILESIZE=10000
+```
