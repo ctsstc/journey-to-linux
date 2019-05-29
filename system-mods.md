@@ -18,6 +18,20 @@ Put the following lines in your `~/.inputrc`:
 
 > https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow
 
+## UI
+
+### Apperance
+
+- Dark Mode - Enable
+
+### GNOME Tweaks
+
+#### Window Titlebars
+
+- Maximize - Enable
+- Minimize - Enable
+- Placement - Left
+
 ## Bash RC Mods
 
 To reaload for the current terminal: `source ~/.bashrc`
