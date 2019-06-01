@@ -20,4 +20,3 @@ git config -e --global
 ### Resources
 
 - <https://stackoverflow.com/questions/6127328/how-can-i-delete-all-git-branches-which-have-been-merged>
-- 
