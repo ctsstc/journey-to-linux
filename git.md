@@ -12,9 +12,11 @@ git config -e --global
 
 ### Add `delimb` alias
 
+**Note**: This will check against the current branch you're on.
+
 ```shell
 [alias]
-	delimb = !"f() { git branch --merged | egrep -v \"(^\\*|master|dev)\" || true | xargs git branch -d; }; f"
+	delimb = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 ```
 
 ### Resources
