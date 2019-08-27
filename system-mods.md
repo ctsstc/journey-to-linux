@@ -18,6 +18,64 @@ Put the following lines in your `~/.inputrc`:
 
 > <https://askubuntu.com/questions/59846/bash-history-search-partial-up-arrow>
 
+## Use ZSH
+
+> https://blog.joaograssi.com/windows-subsystem-for-linux-with-oh-my-zsh-conemu/
+
+```bash
+sudo apt-get install zsh
+```
+
+### Oh My ZSH!
+
+```bash
+sudo apt-get install git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+#### Configuration
+
+Make sure it installed properly. You should find this in your `~/.bashrc` if it was installed correctly. If you do not see this add it.
+
+```bash
+if test -t 1; then
+exec zsh
+fi
+```
+
+#### Themes
+
+Edit `~/.zshrc`
+
+```bash
+# Find and change this
+ZSH_THEME="robbyrussell"
+
+# To this
+ZSH_THEME="agnoster"
+```
+
+#### Fonts
+
+Install the powerline fonts for the agnoster theme.
+
+**Note**: You will need to do this on Windows if you're running WSL.
+
+```bash
+git clone https://github.com/powerline/fonts.git
+```
+
+You may need to use Menlo for a monospaced font.
+
+```bash
+git clone https://github.com/abertsch/Menlo-for-Powerline.git
+```
+
+Another option: https://github.com/Homebrew/homebrew-cask-fonts
+
+> **NOTE**: you may need to restart VSCode for the font to take hold.
+> You may also have to set the `Terminal > Integrated: Font Family` to `Menlo for Powerline` for VSCode
+
 ## UI
 
 ### Appearance
