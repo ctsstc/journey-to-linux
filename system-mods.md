@@ -34,6 +34,8 @@ Put the following lines in your `~/.inputrc`:
 
 ## Bash RC Mods
 
+Modifications for `~/.bashrc`
+
 To reload for the current terminal: `source ~/.bashrc`
 
 ### Quick Projects Folder Access
@@ -61,12 +63,33 @@ First you'll need to install fzf:
   - <https://nickjanetakis.com/blog/fuzzy-search-your-bash-history-in-style-with-fzf>
   - <https://www.youtube.com/watch?v=DBGvWyQNYY0>
 
+Then add this to your `.bashrc`
+
 ```bash
 writecmd (){ perl -e 'ioctl STDOUT, 0x5412, $_ for split //, do{ chomp($_ = <>); $_ }' ; }
 
 fh() {
   ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -re 's/^\s*[0-9]+\s*//' | writecmd
 }
+```
+
+After installing you may see something like:
+
+```
+==> fzf
+To install useful keybindings and fuzzy completion:
+  /home/linuxbrew/.linuxbrew/opt/fzf/install
+```
+
+Also consider running the installer mentioned above from the brew install.
+This can enable:
+
+- (CTRL-T, CTRL-R, ALT-C) to fuzzy search the current directory.
+- Fuzzy searching completion ie: `cd /someDir/wh**`
+
+```
+cd /home/linuxbrew/.linuxbrew/opt/fzf
+./install
 ```
 
 ### Increase History State Size
