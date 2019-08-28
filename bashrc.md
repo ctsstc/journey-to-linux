@@ -19,7 +19,7 @@ eval $(keychain --eval id_rsa)
 If you want to silence it completely
 
 ```shell
-eval $(keychain --eval id_rsa) >/dev/null 2>&1
+eval $(keychain --eval id_rsa >/dev/null 2>&1)
 ```
 
 > If you would like to redirect the output to logs:
