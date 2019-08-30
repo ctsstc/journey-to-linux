@@ -188,3 +188,25 @@ writecmd (){ perl -e 'ioctl STDOUT, 0x5412, $_ for split //, do{ chomp($_ = <>);
 # add-zsh-hook chpwd load-nvmrc
 # load-nvmrc
 ```
+
+## Link Dump + Oh My ZSH
+
+Including fonts, junk, random stuff.
+
+- https://superuser.com/questions/390191/where-can-i-find-a-list-of-all-formulas-available-for-homebrew
+- https://github.com/microsoft/WSL/issues/1838
+- https://blog.joaograssi.com/windows-subsystem-for-linux-with-oh-my-zsh-conemu/
+- https://github.com/robbyrussell/oh-my-zsh
+- https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/
+- https://github.com/powerline/fonts
+- https://blog.zhaytam.com/2019/04/19/powerline-and-zshs-agnoster-theme-in-vs-code/
+- https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/shrink-path
+- https://stackoverflow.com/questions/764600/how-can-you-export-your-bashrc-to-zshrc
+- https://superuser.com/questions/187639/zsh-not-hitting-profile
+- http://blog.bityard.net/articles/2019/August/rabbit-holes-the-secret-to-technical-expertise.html
+- https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#option-1-install-powerline-fonts
+- https://github.com/ryanoasis/nerd-fonts#patched-fonts
+- https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+- https://github.com/romkatv/powerlevel10k
+- https://github.com/junegunn/fzf/wiki/Examples#command-history
+- https://stackoverflow.com/questions/10341271/switching-from-zsh-to-bash-on-osx-and-back-again/10341338
