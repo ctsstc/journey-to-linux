@@ -9,6 +9,11 @@ eval $(keychain --eval id_rsa >/dev/null 2>&1)
 ## DUMP FOR NOW
 
 ```bash
+# Fix for "command not found: complete"
+#   https://github.com/eddiezane/lunchy/issues/57
+autoload bashcompinit
+bashcompinit
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
