@@ -215,3 +215,17 @@ Including fonts, junk, random stuff.
 - https://github.com/romkatv/powerlevel10k
 - https://github.com/junegunn/fzf/wiki/Examples#command-history
 - https://stackoverflow.com/questions/10341271/switching-from-zsh-to-bash-on-osx-and-back-again/10341338
+
+## History Goods
+
+```bash
+# Increase history size
+# https://askubuntu.com/questions/307541/how-to-change-history-size-for-ever#
+HISTSIZE=10000
+HISTFILESIZE=10000
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# https://superuser.com/questions/519596/share-history-in-multiple-zsh-shell
+setopt inc_append_history
+setopt share_history
+```
