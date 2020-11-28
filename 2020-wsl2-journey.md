@@ -59,3 +59,17 @@ alias projects="cd ~/projects"
 ```
 
 > Protip: run `source ~/.zshrc` to reload the changes.
+
+## ASDF Version Manager
+
+- https://asdf-vm.com/
+- https://github.com/asdf-vm/asdf
+- https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf
+
+```shell
+sudo apt install curl git
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
+
+code ~/.zshrc
+# Add `asdf` to plugins section ie: `plugins=(git asdf)`
+```
