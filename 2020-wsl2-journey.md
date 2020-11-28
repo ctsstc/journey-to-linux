@@ -74,6 +74,21 @@ code ~/.zshrc
 # Add `asdf` to plugins section ie: `plugins=(git asdf)`
 ```
 
+### Install Node JS
+
+```shell
+asdf plugin-add nodejs git@github.com:asdf-vm/asdf-nodejs.git
+
+# https://github.com/asdf-vm/asdf-nodejs/issues/119
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+# List available versions
+asdf list-all nodejs
+# Remember even major versions are LTS and odd are not
+asdf install nodejs 14.15.1
+# You may or may not want to set the asdf global version, I did not
+#  In hopes that it will load the latest /shrug
+```
 
 ## Add SSH Key to Github
 
