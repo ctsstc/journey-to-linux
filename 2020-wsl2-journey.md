@@ -109,5 +109,76 @@ clip < ~/.ssh/id_ed25519.pub
 cat ~/.ssh/id_ed25519.pub
 ```
 
+## Add GPG Key to Github
 
+- https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/managing-commit-signature-verification
+  - https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-gpg-key#generating-a-gpg-key
+- https://github.com/settings/keys
+  - https://github.com/settings/gpg/new
 
+### Generate a GPG Key
+
+```shell
+# Note: Size must be at least 4096
+# No passphrase to avoid annoying VS Code integration with secure commits
+gpg --full-generate-key
+
+# Grab the hash from `sec`
+# ie: sec   rsa4096/DEADBEEF1337 2020-11-28 [SC]
+#  You would copy: DEADBEEF1337
+gpg --list-secret-keys --keyid-format LONG
+
+gpg --armor --export DEADBEEF1337
+# or slow clipboard method
+gpg --armor --export DEADBEEF1337 | clip.exe
+```
+
+## Use VSCode for Git Operations
+
+- https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git
+
+```shell
+git config --global core.editor "code --wait"
+```
+
+> Now you can use `git config --global -e`
+
+## Configure Git
+
+This will allow:
+- To make commits with your name and email
+- VSCode for Git Editor
+- VSCode for Git Differencing & Merging
+- Sign commits
+
+**Note**: Change singing key with the hash from the GPG Generation step above.
+
+- https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code
+- Didn't do the pinetry stuff since I did no password.
+
+```shell
+[user]
+	name = "Your Cool Name"
+	email = "YOUREMAIL@SOMEWHERE.COM"
+	signingkey = "DEADBEEF1337"
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[core]
+	editor = "code --wait"
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+```
+
+## Configure VSCode to Sign Commits
+
+```json
+"git.enableCommitSigning": true
+```
