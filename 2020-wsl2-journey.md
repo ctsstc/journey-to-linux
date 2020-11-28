@@ -73,3 +73,26 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
 code ~/.zshrc
 # Add `asdf` to plugins section ie: `plugins=(git asdf)`
 ```
+
+
+## Add SSH Key to Github
+
+- https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+- https://github.com/settings/keys
+  - IDK why that guide never links to this???
+  - https://github.com/settings/ssh/new
+
+```shell
+# I tend to use no password if my system is already protected, and I use the same passwords anyways. Sloppy, but eh. 🤫
+ssh-keygen -t ed25519 -C "YOUREMAIL@SOMEWHERE.COM"
+ssh-add ~/.ssh/id_ed25519
+
+# https://stackoverflow.com/questions/18695934/unable-to-copy-ssh-id-rsa-pub
+# Be patient
+clip < ~/.ssh/id_ed25519.pub
+# or just cat it and copy it
+cat ~/.ssh/id_ed25519.pub
+```
+
+
+
