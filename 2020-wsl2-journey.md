@@ -86,8 +86,8 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf list-all nodejs
 # Remember even major versions are LTS and odd are not
 asdf install nodejs 14.15.1
-# You may or may not want to set the asdf global version, I did not
-#  In hopes that it will load the latest /shrug
+# Set global so that npm/npx works
+asdf global nodejs 14.15.1 
 ```
 
 ## Add SSH Key to Github
@@ -154,9 +154,9 @@ This will allow:
 **Note**: Change singing key with the hash from the GPG Generation step above.
 
 - https://www.39digits.com/signed-git-commits-on-wsl2-using-visual-studio-code
-- Didn't do the pinetry stuff since I did no password.
+- Didn't do the pinentry stuff since I did no password.
 
-```shell
+```gitconfig
 [user]
 	name = "Your Cool Name"
 	email = "YOUREMAIL@SOMEWHERE.COM"
