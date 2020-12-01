@@ -182,3 +182,23 @@ This will allow:
 ```json
 "git.enableCommitSigning": true
 ```
+
+## Fuzzy History
+
+I NEED IT!
+
+## Additional Dependencies
+
+These will likely come in handy later, such as installing dependencies with npm.
+
+```shell
+sudo apt-get install build-essential
+
+# https://askubuntu.com/questions/496549/error-you-must-put-some-source-uris-in-your-sources-list
+# uncomment all deb-src lines
+sudo nano /etc/apt/sources.list
+sudo apt build-dep python3.9
+
+asdf plugin-add python
+asdf install python 3.9.0
+```
