@@ -20,3 +20,7 @@
 "editor.renderWhitespace": "boundary"
 ```
 
+## Extensions
+
+- `vscode-icons-team.vscode-icons`
+- `eamodio.gitlens`
