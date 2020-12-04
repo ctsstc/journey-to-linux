@@ -60,6 +60,14 @@ alias projects="cd ~/projects"
 
 > Protip: run `source ~/.zshrc` to reload the changes.
 
+## Change Prompt Icons
+
+If you chose to have many icons, I often don't need to see the OS in the terminal, so I remove it.
+
+- Open `~/.p10k.zsh`
+- Find the line with `POWERLEVEL9K_LEFT_PROMPT_ELEMENTS`
+- Comment out `os_icon`
+
 ## ASDF Version Manager
 
 - https://asdf-vm.com/
