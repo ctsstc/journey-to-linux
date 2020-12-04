@@ -7,3 +7,16 @@
 ```json
 "terminal.integrated.shellArgs.linux": ["-l"]
 ```
+
+### Window Title Bar Style
+
+```json
+"window.titleBarStyle": "custom"
+```
+
+### Render Whitespace
+
+```json
+"editor.renderWhitespace": "boundary"
+```
+
