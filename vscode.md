@@ -19,3 +19,4 @@
 
 - `vscode-icons-team.vscode-icons`
 - `eamodio.gitlens`
+- `streetsidesoftware.code-spell-checker`
