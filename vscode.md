@@ -10,7 +10,8 @@
 "window.titleBarStyle": "custom",
 "workbench.iconTheme": "vscode-icons",
 "terminal.integrated.fontFamily": "MesloLGS NF",
-"files.autoSave": "onFocusChange"
+"files.autoSave": "onFocusChange",
+"git.confirmSync": false
 ```
 
 ## Extensions
