@@ -31,6 +31,13 @@ Add this to your corresponding profile after you have installed the fonts.
 "fontFace": "MesloLGS NF"
 ```
 
+### Gnome Terminal
+
+- Open Terminal
+- Preferences
+- Profiles (Pop)
+- Change Custom Font to `MesloLGS NF Regular`
+
 ## Install ZSH & Oh My ZSH & Powerlevel 10k
 
 ```shell
@@ -48,6 +55,17 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # You should be presented with the Powerlevel10k Conifguration Wizard
 # You may want to get 
 ```
+
+### Gnome Users
+
+If you're following these on Unix on something like Pop! OS and you're using the Gnome Terminal, then you will need to also need to set the terminal to zsh.
+
+- Open Terminal
+- Preferences
+- Profiles (Pop)
+- Command Tab
+- Check _Run a custom Command instead of my shell_ set it to `zsh`
+  - Make sure _When command exists:_ is set to `Exit the terminal`
 
 ## Aliases
 
