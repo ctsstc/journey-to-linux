@@ -12,7 +12,8 @@
 "terminal.integrated.fontFamily": "MesloLGS NF",
 "files.autoSave": "onFocusChange",
 "git.confirmSync": false,
-"workbench.colorTheme": "Monokai"
+"workbench.colorTheme": "Monokai",
+"git.autofetch": true
 ```
 
 ## Extensions
