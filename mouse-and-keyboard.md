@@ -80,3 +80,36 @@ m:0x0 + b:8
 "xte key ctrl+bracketright"
 m:0x0 + b:9
 ```
+
+## Mac Options
+
+### Keyboard
+
+In the scenario that you would like to remap the home or end buttons on a full keyboard to act like you would expect in Windows or most Linux systems to move the cursor to the start or end of a line. These may be potential options.
+
+Remapping keys can likely be done natively with key binding configs, or utilizing something like Karabiner.
+
+#### Karabiner
+
+This is the powerhouse option for maximum configuration, supported by a community with custom mappings that you can choose to utilize.
+
+- <https://karabiner-elements.pqrs.org/docs/manual/configuration/configure-simple-modifications/>
+
+#### Simple Key Binding Configs
+
+- <https://discussions.apple.com/thread/251108215?answerId=252138948022&sortBy=rank#252138948022>
+
+```
+mkdir -p $HOME/Library/KeyBindings
+echo '{
+/* Remap Home / End keys to be correct */
+"\UF729" = "moveToBeginningOfLine:"; /* Home */
+"\UF72B" = "moveToEndOfLine:"; /* End */
+"$\UF729" = "moveToBeginningOfLineAndModifySelection:"; /* Shift + Home */
+"$\UF72B" = "moveToEndOfLineAndModifySelection:"; /* Shift + End */
+"^\UF729" = "moveToBeginningOfDocument:"; /* Ctrl + Home */
+"^\UF72B" = "moveToEndOfDocument:"; /* Ctrl + End */
+"$^\UF729" = "moveToBeginningOfDocumentAndModifySelection:"; /* Shift + Ctrl + Home */
+"$^\UF72B" = "moveToEndOfDocumentAndModifySelection:"; /* Shift + Ctrl + End */
+}' > $HOME/Library/KeyBindings/DefaultKeyBinding.dict
+```  
